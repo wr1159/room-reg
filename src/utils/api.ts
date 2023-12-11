@@ -4,6 +4,9 @@
  *
  * We also create a few inference helpers for input and output types.
  */
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
 import { type inferRouterInputs, type inferRouterOutputs } from "@trpc/server";
@@ -66,3 +69,7 @@ export type RouterInputs = inferRouterInputs<AppRouter>;
  * @example type HelloOutput = RouterOutputs['example']['hello']
  */
 export type RouterOutputs = inferRouterOutputs<AppRouter>;
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}

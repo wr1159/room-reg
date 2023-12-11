@@ -14,6 +14,9 @@ export const roomRouter = createTRPCRouter({
         where: {
           id: input.id,
         },
+        include: {
+          occupant: true,
+        },
       });
     }),
 });

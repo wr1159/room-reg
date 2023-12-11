@@ -23,6 +23,8 @@ model User {
     id        Int      @id @default(autoincrement())
     occupies  Room?
     name      String
+    genderId  Int
+    gender    Gender   @relation(fields: [genderId], references: [int])
     points    Int
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
@@ -31,9 +33,18 @@ model User {
 model Room {
     id         Int      @id @default(autoincrement())
     occupant   User?    @relation(fields: [occupantId], references: [id])
-    occupantId Int      @unique
+    occupantId Int?     @unique
     name       String
-    isDouble   Boolean
+    genderId   Int
+    gender     Gender   @relation(fields: [genderId], references: [int])
+    isDouble   Boolean? @default(false)
     createdAt  DateTime @default(now())
     updatedAt  DateTime @updatedAt
+}
+
+model Gender {
+    int         Int    @id @default(autoincrement())
+    description String
+    Room        Room[]
+    User        User[]
 }
