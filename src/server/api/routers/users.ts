@@ -49,6 +49,20 @@ export const userRouter = createTRPCRouter({
         },
       });
     }),
+  getUsersByPoints: publicProcedure
+  .input(z.object({ points: z.number().min(0) }))
+  .query(async ({ ctx, input }) => {
+    const users = await ctx.db.user.findMany({
+      where: {
+        points: input.points,
+      },
+      select: {
+        name: true,
+      },
+    });
+
+    return users.map(user => user.name);
+  }),
   createUser: publicProcedure
     .input(
       z.object({
