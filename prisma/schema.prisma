@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
+    provider = "postgresql"
     url      = env("DATABASE_URL")
 }
 
@@ -17,4 +17,23 @@ model Post {
     updatedAt DateTime @updatedAt
 
     @@index([name])
+}
+
+model User {
+    id        Int      @id @default(autoincrement())
+    occupies  Room?
+    name      String
+    points    Int
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Room {
+    id         Int      @id @default(autoincrement())
+    occupant   User?    @relation(fields: [occupantId], references: [id])
+    occupantId Int      @unique
+    name       String
+    isDouble   Boolean
+    createdAt  DateTime @default(now())
+    updatedAt  DateTime @updatedAt
 }

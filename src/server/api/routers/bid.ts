@@ -2,7 +2,10 @@ import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
-export const postRouter = createTRPCRouter({
+export const bidRouter = createTRPCRouter({
+  listRooms: publicProcedure.query(({ ctx }) => {
+    return ctx.db.room.findMany();
+  }),
   bidRoom: publicProcedure
     .input(z.object({ studentId: z.number(), roomId: z.number() }))
     .mutation(async ({ ctx, input }) => {
