@@ -18,6 +18,8 @@ const femaleSingle = {
   gender: Female,
   genderId: 2,
   occupant: null,
+  createdAt: new Date(2020, 12, 10),
+  updatedAt: new Date(2020, 12, 11),
 };
 const BlockThreeA: React.FC = () => {
   // display columns of rooms

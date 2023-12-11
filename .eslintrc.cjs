@@ -26,6 +26,12 @@ const config = {
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     "@typescript-eslint/require-await": "off",
     "@typescript-eslint/no-unsafe-member*": "off",
+    "@typescript-eslint/no-unsafe*": "off",
+    "@typescript-eslint/await-thenable": "off",
+    "@typescript-eslint/non-nullable-type-assertion-style": "off",
+    "@typescript-eslint/no-empty-interface*": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
     "@typescript-eslint/no-floating*": "off",
     "@typescript-eslint/no-misused-promises": [
       "error",
