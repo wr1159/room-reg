@@ -23,6 +23,7 @@ async function seedUsers() {
     where: { id: 1 },
     create: {
       name: "Alice",
+      matricNumber: "A0123456A",
       points: 121,
       genderId: 2,
     },
@@ -33,6 +34,7 @@ async function seedUsers() {
     where: { id: 2 },
     create: {
       name: "Bob",
+      matricNumber: "A98765432B",
       points: 89,
       genderId: 1,
     },
@@ -43,6 +45,7 @@ async function seedUsers() {
     where: { id: 3 },
     create: {
       name: "Charlie",
+      matricNumber: "A1234567C",
       points: 97,
       genderId: 1,
     },
@@ -53,6 +56,7 @@ async function seedUsers() {
     where: { id: 4 },
     create: {
       name: "Dave",
+      matricNumber: "A7654321D",
       points: 100,
       genderId: 1,
     },
@@ -63,6 +67,7 @@ async function seedUsers() {
     where: { id: 5 },
     create: {
       name: "Eve",
+      matricNumber: "A2345678E",
       points: 113,
       genderId: 2,
     },

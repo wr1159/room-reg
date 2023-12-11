@@ -1,5 +1,4 @@
-import React, { ReactNode } from "react";
-
+import React, { ReactNode, useState } from "react";
 import { Button } from "~/components/ui/button";
 import {
   Dialog,
@@ -31,11 +30,26 @@ const BidModal: React.FC<BidModalProps> = ({
   isDialogOpen,
   setIsDialogOpen,
 }) => {
+  type User = RouterOutputs["user"]["createUser"];
+  const [matricNumber, setMatricNumber] = useState("");
   const roomMutation = api.bid.bidRoom.useMutation();
+  const { data: user, refetch: refetchUser } = api.user.getUser.useQuery(
+    { matricNumber },
+    { enabled: false },
+  );
 
   const handleSubmitBid = async () => {
+    // Refetch the user data
+    const { data: refetchedUser } = await refetchUser();
+
+    if (!refetchedUser) {
+      toast.error("User not found");
+      return;
+    }
+
+    // Bid the room
     await roomMutation.mutate({
-      userId: 1,
+      userId: refetchedUser?.id,
       roomId: room?.id as number,
     });
 
@@ -59,6 +73,13 @@ const BidModal: React.FC<BidModalProps> = ({
             Are you sure you want to bid for this room?
           </DialogDescription>
         </DialogHeader>
+
+        <Label htmlFor="matricNumber">Matric Number</Label>
+        <Input
+          id="matricNumber"
+          value={matricNumber}
+          onChange={(e) => setMatricNumber(e.target.value)}
+        />
 
         <DialogFooter>
           <DialogClose asChild>

@@ -1,12 +1,9 @@
 import { RouterOutputs } from "~/utils/api";
-import { Button } from "~/components/ui/button";
 import RoomCard from "~/components/RoomCard";
 import React from "react";
 import GrassPatch from "./GrassPatch";
 import LevelCard from "./LevelCard";
-import Toilet from "./Toilet";
 import Pantry from "./Pantry";
-import Stairs from "./Stairs";
 type Room = RouterOutputs["room"]["getRoom"];
 
 const Female = {
@@ -14,12 +11,10 @@ const Female = {
   description: "Female",
 };
 const femaleSingle = {
-  id: 8,
+  id: 3,
   occupantId: null,
-  name: "3-308",
+  name: "5-317",
   isDouble: false,
-  createdAt: new Date(2020, 12, 10),
-  updatedAt: new Date(2020, 12, 11),
   gender: Female,
   genderId: 2,
   occupant: null,

@@ -20,11 +20,11 @@ export const userRouter = createTRPCRouter({
   }),
 
   getUser: publicProcedure
-    .input(z.object({ id: z.number() }))
+    .input(z.object({ matricNumber: z.string() }))
     .query(({ ctx, input }) => {
       return ctx.db.user.findFirst({
         where: {
-          id: input.id,
+          matricNumber: input.matricNumber,
         },
         include: {
           gender: {
@@ -42,6 +42,7 @@ export const userRouter = createTRPCRouter({
         name: z.string().min(1),
         genderId: z.number().min(1).max(2),
         points: z.number().min(0),
+        matricNumber: z.string().min(1),
       }),
     )
     .mutation(async ({ ctx, input }) => {
@@ -50,6 +51,7 @@ export const userRouter = createTRPCRouter({
           name: input.name,
           genderId: input.genderId,
           points: input.points,
+          matricNumber: input.matricNumber,
         },
       });
     }),

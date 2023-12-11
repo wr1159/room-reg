@@ -6,7 +6,7 @@ export const bidRouter = createTRPCRouter({
   bidRoom: publicProcedure
     .input(z.object({ userId: z.number(), roomId: z.number() }))
     .mutation(async ({ ctx, input }) => {
-      ctx.db.user.update({
+      await ctx.db.user.update({
         where: {
           id: input.userId,
         },
@@ -19,7 +19,7 @@ export const bidRouter = createTRPCRouter({
         },
       });
 
-      ctx.db.room.update({
+      await ctx.db.room.update({
         where: {
           id: input.roomId,
         },

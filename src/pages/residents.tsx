@@ -24,6 +24,7 @@ export default function Residents() {
           <TableRow>
             <TableHead>Name</TableHead>
             <TableHead>Gender</TableHead>
+            <TableHead>MatricNumber</TableHead>
             <TableHead>Points</TableHead>
             <TableHead>Room Selected</TableHead>
           </TableRow>
@@ -33,6 +34,7 @@ export default function Residents() {
             const name = resident.name;
             const gender = resident.gender.description;
             const points = resident.points;
+            const matricNumber = resident.matricNumber;
             return (
               <TableRow key={resident.id}>
                 <TableCell className="font-bold">{name}</TableCell>
@@ -41,6 +43,7 @@ export default function Residents() {
                 >
                   {gender}
                 </TableCell>
+                <TableCell className="font-bold">{matricNumber}</TableCell>
                 <TableCell
                   className={
                     points >= 100
