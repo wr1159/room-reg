@@ -14,8 +14,8 @@ export default function Bid() {
     <>
       <main className="max-h-screen w-screen">
         <Tabs defaultValue="2" className="flex flex-col">
-          <div className="max-w-screen mx-0 overflow-scroll sm:mx-auto sm:w-fit">
-            <TabsList className="max-w-screen mx-auto">
+          <div className="max-w-screen overflow-scroll sm:mx-auto sm:overflow-auto ">
+            <TabsList className=" ">
               {blocks.map((block) => {
                 return (
                   <TabsTrigger

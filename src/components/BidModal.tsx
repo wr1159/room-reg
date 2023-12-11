@@ -38,15 +38,35 @@ const BidModal: React.FC<BidModalProps> = ({
     { enabled: false },
   );
 
+  const {
+    data: highestUnoccupiedPoints,
+    refetch: refetchHighestUnoccupiedPoints,
+  } = api.user.getHighestUnoccupiedPoints.useQuery();
+
   const handleSubmitBid = async () => {
     // Refetch the user data
     const { data: refetchedUser } = await refetchUser();
-
+    const { data: refetchedHighestUnoccupiedPoints } =
+      await refetchHighestUnoccupiedPoints();
     if (!refetchedUser) {
       toast.error("User not found");
       return;
     }
 
+    if (refetchedUser.occupies) {
+      toast.error("User already occupies a room");
+      return;
+    }
+
+    if (refetchedHighestUnoccupiedPoints === undefined) {
+      toast.error("Failed to fetch highest unoccupied points");
+      return;
+    }
+
+    if (refetchedUser.points < refetchedHighestUnoccupiedPoints) {
+      toast.error("Please wait for your turn.");
+      return;
+    }
     // Bid the room
     await roomMutation.mutate({
       userId: refetchedUser?.id,
@@ -57,6 +77,9 @@ const BidModal: React.FC<BidModalProps> = ({
       console.log(roomMutation.data);
       toast.success("Bid successfully submitted!");
       setIsDialogOpen(false);
+    } else {
+      toast.error("An error occured while submitting your bid");
+      return;
     }
   };
 

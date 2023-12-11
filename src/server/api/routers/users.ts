@@ -19,6 +19,19 @@ export const userRouter = createTRPCRouter({
     });
   }),
 
+  getHighestUnoccupiedPoints: publicProcedure.query(async ({ ctx }) => {
+    const user = await ctx.db.user.findFirst({
+      where: {
+        occupies: null,
+      },
+      orderBy: {
+        points: 'desc',
+      },
+    });
+
+    return user ? user.points : 0;
+  }),
+
   getUser: publicProcedure
     .input(z.object({ matricNumber: z.string() }))
     .query(({ ctx, input }) => {
