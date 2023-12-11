@@ -1,6 +1,7 @@
 import { RouterOutputs } from "~/utils/api";
 import { Button } from "~/components/ui/button";
 import BidModal from "./BidModal";
+import { useState } from "react";
 type Room = RouterOutputs["room"]["getRoom"];
 
 type RoomCardProps = {
@@ -15,12 +16,17 @@ const getRoomType = (room: Room) => {
 };
 
 export default function RoomCard({ room }: RoomCardProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   return (
-    <BidModal room={room}>
+    <BidModal
+      room={room}
+      isDialogOpen={isDialogOpen}
+      setIsDialogOpen={setIsDialogOpen}
+    >
       <Button
         className="flex h-16 min-h-[64px] w-20 min-w-[80px] flex-col px-2 py-1 text-xs"
-        // variant={room?.occupant ? "outline" : "default"}
         disabled={room?.occupant ? true : false}
+        onClick={() => setIsDialogOpen(true)}
       >
         <span className="text-sm">{room?.name}</span>
         <span>{getRoomType(room)}</span>

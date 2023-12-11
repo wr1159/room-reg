@@ -2,16 +2,16 @@ import { Button } from "~/components/ui/button";
 import { twMerge } from "tailwind-merge";
 import { withClassname } from "./Stairs";
 
-const Pantry: React.FC<withClassname> = ({ className }) => {
+const Lift: React.FC<withClassname> = ({ className }) => {
   return (
     <Button
-      className={twMerge("h-32 w-20 border-2", className)}
+      className={twMerge("w-[248px] border-2", className)}
       variant="outline"
       disabled
     >
-      Pantry
+      Lift 1 & Lift 2
     </Button>
   );
 };
 
-export default Pantry;
+export default Lift;

@@ -1,12 +1,13 @@
 import { RouterOutputs } from "~/utils/api";
-import { Button } from "~/components/ui/button";
 import BlockTwo from "./BlockTwo";
 import BlockThree from "./BlockThree";
 import BlockThreeA from "./BlockThreeA";
 import BlockFour from "./BlockFour";
 import BlockFive from "./BlockFive";
 import BlockSix from "./BlockSix";
+import BlockSeven from "./BlockSeven";
 import GrassPatch from "./GrassPatch";
+import BlockEight from "./BlockEight";
 type Room = RouterOutputs["room"]["getRoom"];
 
 interface BlockProps {
@@ -27,9 +28,9 @@ const Block: React.FC<BlockProps> = ({ blockNumber }) => {
   } else if (blockNumber == "6") {
     return <BlockSix />;
   } else if (blockNumber == "7") {
-    return <BlockThree />;
+    return <BlockSeven />;
   } else if (blockNumber == "8") {
-    return <BlockThree />;
+    return <BlockEight />;
   } else {
     return <GrassPatch />;
   }
