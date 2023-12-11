@@ -3,18 +3,32 @@ import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
 export const bidRouter = createTRPCRouter({
-  listRooms: publicProcedure.query(({ ctx }) => {
-    return ctx.db.room.findMany();
-  }),
   bidRoom: publicProcedure
-    .input(z.object({ studentId: z.number(), roomId: z.number() }))
+    .input(z.object({ userId: z.number(), roomId: z.number() }))
     .mutation(async ({ ctx, input }) => {
+      ctx.db.user.update({
+        where: {
+          id: input.userId,
+        },
+        data: {
+          occupies: {
+            connect: {
+              id: input.roomId,
+            },
+          },
+        },
+      });
+
       ctx.db.room.update({
         where: {
           id: input.roomId,
         },
         data: {
-          occupantId: input.roomId,
+          occupant: {
+            connect: {
+              id: input.userId,
+            },
+          },
         },
       });
     }),

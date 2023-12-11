@@ -1,6 +1,6 @@
 import { RouterOutputs } from "~/utils/api";
 import { Button } from "~/components/ui/button";
-
+import BidModal from "./BidModal";
 type Room = RouterOutputs["room"]["getRoom"];
 
 type RoomCardProps = {
@@ -16,14 +16,16 @@ const getRoomType = (room: Room) => {
 
 export default function RoomCard({ room }: RoomCardProps) {
   return (
-    <Button
-      className="flex h-16 min-h-[64px] w-20 min-w-[80px] flex-col px-2 py-1 text-xs"
-      // variant={room?.occupant ? "outline" : "default"}
-      disabled={room?.occupant ? true : false}
-    >
-      <span className="text-sm">{room?.name}</span>
-      <span>{getRoomType(room)}</span>
-      <span className="font-bold">{room?.occupant?.name}</span>
-    </Button>
+    <BidModal room={room}>
+      <Button
+        className="flex h-16 min-h-[64px] w-20 min-w-[80px] flex-col px-2 py-1 text-xs"
+        // variant={room?.occupant ? "outline" : "default"}
+        disabled={room?.occupant ? true : false}
+      >
+        <span className="text-sm">{room?.name}</span>
+        <span>{getRoomType(room)}</span>
+        <span className="font-bold">{room?.occupant?.name}</span>
+      </Button>
+    </BidModal>
   );
 }

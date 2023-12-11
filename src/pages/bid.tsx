@@ -2,6 +2,7 @@ import { useState } from "react";
 import { api } from "~/utils/api";
 import RoomCard from "~/components/RoomCard";
 import Block from "~/components/Block";
+import BidModal from "~/components/BidModal";
 import BlockThree from "~/components/BlockThree";
 import SwitchBlocks from "~/components/SwitchBlocks";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
@@ -41,10 +42,7 @@ export default function Bid() {
 
           {blocks.map((block) => {
             return (
-              <TabsContent
-                value={block}
-                className="bg-secondary overflow-scroll"
-              >
+              <TabsContent value={block} className="bg-secondary min-w-fit">
                 <Block blockNumber={block} />
               </TabsContent>
             );
