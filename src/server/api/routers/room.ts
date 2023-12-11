@@ -16,6 +16,11 @@ export const roomRouter = createTRPCRouter({
         },
         include: {
           occupant: true,
+          gender: {
+            select: {
+              description: true,
+            },
+          },
         },
       });
     }),

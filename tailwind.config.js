@@ -22,6 +22,7 @@ module.exports = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         merriweather: ['"Merriweather Sans"', ...fontFamily.sans],
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

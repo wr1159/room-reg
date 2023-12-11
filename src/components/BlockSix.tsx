@@ -3,8 +3,10 @@ import { Button } from "~/components/ui/button";
 import RoomCard from "~/components/RoomCard";
 import React from "react";
 import GrassPatch from "./GrassPatch";
+import RFResidence from "./RFResidence";
 import LevelCard from "./LevelCard";
 import Toilet from "./Toilet";
+import Pantry from "./Pantry";
 import Stairs from "./Stairs";
 type Room = RouterOutputs["room"]["getRoom"];
 
@@ -152,10 +154,10 @@ const femaleSingle = {
   genderId: 2,
   occupant: null,
 };
-const BlockThree: React.FC = () => {
+const BlockSix: React.FC = () => {
   // display columns of rooms
   return (
-    <div className="flex gap-x-5 p-4">
+    <div className="flex gap-x-8 p-4">
       {/* Left column */}
       <div className="flex min-w-max gap-x-4">
         <div className="flex flex-col gap-y-1">
@@ -168,8 +170,9 @@ const BlockThree: React.FC = () => {
         </div>
         <div className="flex flex-col gap-y-1">
           <div className="h-full" />
-          <Toilet gender="Female" />
+          <Toilet gender="Male" />
           <Stairs />
+          <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
@@ -188,7 +191,7 @@ const BlockThree: React.FC = () => {
           <div className="h-full" />
           <Toilet gender="Female" />
           <Stairs />
-          <RoomCard room={femaleSingle} />
+          <Pantry className="min-h-[128px]" />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
@@ -200,7 +203,7 @@ const BlockThree: React.FC = () => {
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <div className="h-full" />
-          <LevelCard level="1.5" />
+          <LevelCard level="2" />
         </div>
         <div className="flex flex-col gap-y-1">
           <div className="h-full" />
@@ -210,96 +213,71 @@ const BlockThree: React.FC = () => {
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
-          <LevelCard level="1" />
-        </div>
-      </div>
-      {/* Middle */}
-      <div className="flex flex-col gap-y-4">
-        <div className="flex gap-x-1">
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-        </div>
-        <div className="flex gap-x-1">
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-          <RoomCard room={room7} />
-        </div>
-        <div className="flex gap-x-1">
-          <RoomCard room={room1} />
-          <RoomCard room={room2} />
-          <RoomCard room={room3} />
-          <RoomCard room={room4} />
-          <RoomCard room={room5} />
-          <RoomCard room={room6} />
-        </div>
-        <GrassPatch className="h-[340px]" />
-      </div>
-      {/* Right Column */}
-      <div className="flex gap-x-4">
-        <div className="flex flex-col gap-y-1">
-          <div className="h-full" />
-          <Toilet gender="Male" />
-          <Stairs />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <LevelCard level="1" />
         </div>
-        <div className="flex flex-col gap-y-1">
+      </div>
+      {/* Middle Right Half */}
+      <div className="flex-col space-y-2">
+        <div className="flex gap-x-1">
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
-          <div className="h-full" />
-          <LevelCard level="1.5" />
-        </div>
-        <div className="flex flex-col gap-y-1">
-          <div className="h-full" />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <Stairs className="h-16" />
           <Toilet gender="Female" />
-          <Stairs />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <LevelCard level="2" />
+          <div className="w-full" />
+          <LevelCard level="3" className="h-16" />
         </div>
-        <div className="flex flex-col gap-y-1">
+        <div className="flex gap-x-1">
+          <div className="w-[500px]" />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
           <RoomCard room={femaleSingle} />
-          <div className="h-full" />
-          <LevelCard level="2.5" />
+          <LevelCard level="2.5" className="h-16" />
         </div>
-        <div className="flex flex-col gap-y-1">
-          <div className="h-full" />
+        <div className="flex gap-x-1">
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <Stairs className="h-16" />
+          <Toilet gender="Female" />
+          <div className="w-full" />
+          <LevelCard level="2" className="h-16" />
+        </div>
+        <div className="flex gap-x-1">
+          <div className="w-[500px]" />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <LevelCard level="1.5" className="h-16" />
+        </div>
+        <div className="flex gap-x-1">
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <RoomCard room={femaleSingle} />
+          <Stairs className="h-16" />
           <Toilet gender="Male" />
-          <Stairs />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <LevelCard level="3" />
+          <div className="w-full" />
+          <LevelCard level="1" className="h-16" />
         </div>
-        <div className="flex flex-col gap-y-1">
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <div className="h-full" />
-          <LevelCard level="3.5" />
+        <div className="flex">
+          <GrassPatch className="h-72 w-[500px]" />
+          <RFResidence className="h-40 w-[340px]" />
         </div>
       </div>
     </div>
   );
 };
 
-export default BlockThree;
+export default BlockSix;
