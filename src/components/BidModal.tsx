@@ -58,6 +58,14 @@ const BidModal: React.FC<BidModalProps> = ({
       return;
     }
 
+    if (refetchedUser.genderId !== room?.genderId) {
+      toast.error(
+        `${
+          refetchedUser.gender.description
+        } user cannot choose a ${room?.gender.description.toLowerCase()} room`,
+      );
+    }
+
     if (refetchedHighestUnoccupiedPoints === undefined) {
       toast.error("Failed to fetch highest unoccupied points");
       return;

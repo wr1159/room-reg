@@ -19,6 +19,7 @@ export default function Bid() {
               {blocks.map((block) => {
                 return (
                   <TabsTrigger
+                    key={block}
                     value={block}
                     onClick={() => setSelectedBlock(block)}
                   >
@@ -31,6 +32,7 @@ export default function Bid() {
           {blocks.map((block) => {
             return (
               <TabsContent
+                key={block}
                 value={block}
                 className="max-w-screen h-full max-h-screen overflow-scroll bg-secondary"
               >
