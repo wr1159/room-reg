@@ -85,9 +85,6 @@ const BidModal: React.FC<BidModalProps> = ({
       console.log(roomMutation.data);
       toast.success("Bid successfully submitted!");
       setIsDialogOpen(false);
-    } else {
-      toast.error("An error occured while submitting your bid");
-      return;
     }
   };
 
