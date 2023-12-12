@@ -1,5 +1,5 @@
 import { RouterOutputs } from "~/utils/api";
-import { Button } from "~/components/ui/button";
+import { api } from "~/utils/api";
 import RoomCard from "~/components/RoomCard";
 import React from "react";
 import GrassPatch from "./GrassPatch";
@@ -156,15 +156,16 @@ const femaleSingle = {
 };
 const BlockFour: React.FC = () => {
   // display columns of rooms
+  const { data: rooms } = api.room.listRooms.useQuery();
   return (
     <div className="flex gap-x-8 p-4">
       {/* Left column */}
       <div className="flex min-w-max gap-x-4">
         <div className="flex flex-col gap-y-1">
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-309" />
+          <RoomCard rooms={rooms} roomNumber="4-308" />
+          <RoomCard rooms={rooms} roomNumber="4-307" />
+          <RoomCard rooms={rooms} roomNumber="4-306" />
           <div className="h-full" />
           <LevelCard level="3.5" />
         </div>
@@ -172,18 +173,18 @@ const BlockFour: React.FC = () => {
           <div className="h-full" />
           <Toilet gender="Male" />
           <Stairs />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-305" />
+          <RoomCard rooms={rooms} roomNumber="4-304" />
+          <RoomCard rooms={rooms} roomNumber="4-303" />
+          <RoomCard rooms={rooms} roomNumber="4-302" />
+          <RoomCard rooms={rooms} roomNumber="4-301" />
           <LevelCard level="3" />
         </div>
         <div className="flex flex-col gap-y-1">
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-209" />
+          <RoomCard rooms={rooms} roomNumber="4-208" />
+          <RoomCard rooms={rooms} roomNumber="4-207" />
+          <RoomCard rooms={rooms} roomNumber="4-206" />
           <div className="h-full" />
           <LevelCard level="2.5" />
         </div>
@@ -192,40 +193,40 @@ const BlockFour: React.FC = () => {
           <Toilet gender="Female" />
           <Stairs />
           <Pantry className="min-h-[128px]" />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-203" />
+          <RoomCard rooms={rooms} roomNumber="4-202" />
+          <RoomCard rooms={rooms} roomNumber="4-201" />
           <LevelCard level="2" />
         </div>
         <div className="flex flex-col gap-y-1">
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-109" />
+          <RoomCard rooms={rooms} roomNumber="4-108" />
+          <RoomCard rooms={rooms} roomNumber="4-107" />
+          <RoomCard rooms={rooms} roomNumber="4-106" />
           <div className="h-full" />
-          <LevelCard level="2" />
+          <LevelCard level="1.5" />
         </div>
         <div className="flex flex-col gap-y-1">
           <div className="h-full" />
           <Toilet gender="Male" />
           <Stairs />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-105" />
+          <RoomCard rooms={rooms} roomNumber="4-104" />
+          <RoomCard rooms={rooms} roomNumber="4-103" />
+          <RoomCard rooms={rooms} roomNumber="4-102" />
+          <RoomCard rooms={rooms} roomNumber="4-101" />
           <LevelCard level="1" />
         </div>
       </div>
       {/* Middle Right Half */}
       <div className="flex-col space-y-2">
         <div className="flex gap-x-1">
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-311" />
+          <RoomCard rooms={rooms} roomNumber="4-312" />
+          <RoomCard rooms={rooms} roomNumber="4-313" />
+          <RoomCard rooms={rooms} roomNumber="4-314" />
+          <RoomCard rooms={rooms} roomNumber="4-315" />
+          <RoomCard rooms={rooms} roomNumber="4-316" />
           <Stairs className="h-16" />
           <Toilet gender="Female" />
           <div className="w-full" />
@@ -233,19 +234,19 @@ const BlockFour: React.FC = () => {
         </div>
         <div className="flex gap-x-1">
           <div className="w-[500px]" />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-317" />
+          <RoomCard rooms={rooms} roomNumber="4-318" />
+          <RoomCard rooms={rooms} roomNumber="4-319" />
+          <RoomCard rooms={rooms} roomNumber="4-320" />
           <LevelCard level="2.5" className="h-16" />
         </div>
         <div className="flex gap-x-1">
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-211" />
+          <RoomCard rooms={rooms} roomNumber="4-212" />
+          <RoomCard rooms={rooms} roomNumber="4-213" />
+          <RoomCard rooms={rooms} roomNumber="4-214" />
+          <RoomCard rooms={rooms} roomNumber="4-215" />
+          <RoomCard rooms={rooms} roomNumber="4-216" />
           <Stairs className="h-16" />
           <Toilet gender="Female" />
           <div className="w-full" />
@@ -253,19 +254,19 @@ const BlockFour: React.FC = () => {
         </div>
         <div className="flex gap-x-1">
           <div className="w-[500px]" />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-217" />
+          <RoomCard rooms={rooms} roomNumber="4-218" />
+          <RoomCard rooms={rooms} roomNumber="4-219" />
+          <RoomCard rooms={rooms} roomNumber="4-220" />
           <LevelCard level="1.5" className="h-16" />
         </div>
         <div className="flex gap-x-1">
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
-          <RoomCard room={femaleSingle} />
+          <RoomCard rooms={rooms} roomNumber="4-111" />
+          <RoomCard rooms={rooms} roomNumber="4-112" />
+          <RoomCard rooms={rooms} roomNumber="4-113" />
+          <RoomCard rooms={rooms} roomNumber="4-114" />
+          <RoomCard rooms={rooms} roomNumber="4-115" />
+          <RoomCard rooms={rooms} roomNumber="4-116" />
           <Stairs className="h-16" />
           <Toilet gender="Male" />
           <div className="w-full" />

@@ -307,73 +307,574 @@ async function seedUsers() {
 }
 
 async function seedRooms() {
-  const room1 = await prisma.room.upsert({
-    where: { id: 1 },
-    create: {
-      name: "3-108",
-      genderId: 1,
-    },
-    update: {},
-  });
+  let id = 84
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-309",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-308",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-307",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-306",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-305",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-304",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-303",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-302",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-301",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-209",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-208",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-207",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-206",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-203",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
 
-  const room2 = await prisma.room.upsert({
-    where: { id: 2 },
-    create: {
-      name: "4-210",
-      genderId: 1,
-    },
-    update: {},
-  });
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-202",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-201",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-109",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-108",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-107",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-106",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
 
-  const room3 = await prisma.room.upsert({
-    where: { id: 3 },
-    create: {
-      name: "5-317",
-      genderId: 2,
-    },
-    update: {},
-  });
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-105",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-104",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-103",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-102",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-311",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-312",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-313",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-314",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-315",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-316",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-317",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-318",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
 
-  const room4 = await prisma.room.upsert({
-    where: { id: 4 },
-    create: {
-      name: "6-425",
-      genderId: 1,
-    },
-    update: {},
-  });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-319",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-320",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-211",
+        genderId: 2,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-212",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-213",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+  //   id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-214",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-215",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-216",
+        genderId: 2,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-217",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-218",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-219",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-220",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-111",
+        genderId: 1,
+        isDouble: false,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-112",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-113",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-114",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-115",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "4-116",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+    
+  // const room1 = await prisma.room.upsert({
+  //   where: { id: 1 },
+  //   create: {
+  //     name: "3-108",
+  //     genderId: 1,
+  //   },
+  //   update: {},
+  // });
 
-  const room5 = await prisma.room.upsert({
-    where: { id: 5 },
-    create: {
-      name: "7-111",
-      genderId: 2,
-    },
-    update: {},
-  });
+  // const room2 = await prisma.room.upsert({
+  //   where: { id: 2 },
+  //   create: {
+  //     name: "4-210",
+  //     genderId: 1,
+  //   },
+  //   update: {},
+  // });
 
-  const room6 = await prisma.room.upsert({
-    where: { id: 6 },
-    create: {
-      name: "8-105",
-      genderId: 2,
-    },
-    update: {},
-  });
+  // const room3 = await prisma.room.upsert({
+  //   where: { id: 3 },
+  //   create: {
+  //     name: "5-317",
+  //     genderId: 2,
+  //   },
+  //   update: {},
+  // });
 
-  const room7 = await prisma.room.upsert({
-    where: { id: 7 },
-    create: {
-      name: "2-210",
-      genderId: 1,
-    },
-    update: {},
-  });
+  // const room4 = await prisma.room.upsert({
+  //   where: { id: 4 },
+  //   create: {
+  //     name: "6-425",
+  //     genderId: 1,
+  //   },
+  //   update: {},
+  // });
+
+  // const room5 = await prisma.room.upsert({
+  //   where: { id: 5 },
+  //   create: {
+  //     name: "7-111",
+  //     genderId: 2,
+  //   },
+  //   update: {},
+  // });
+
+  // const room6 = await prisma.room.upsert({
+  //   where: { id: 6 },
+  //   create: {
+  //     name: "8-105",
+  //     genderId: 2,
+  //   },
+  //   update: {},
+  // });
+
+  // const room7 = await prisma.room.upsert({
+  //   where: { id: 7 },
+  //   create: {
+  //     name: "4-210",
+  //     genderId: 1,
+  //   },
+  //   update: {},
+  // });
 }
 
 async function main() {
-  await seedGenders();
-  await seedUsers();
+  // await seedGenders();
+  // await seedUsers();
   await seedRooms();
 }
 main()
