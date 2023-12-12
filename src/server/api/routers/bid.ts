@@ -33,7 +33,7 @@ export const bidRouter = createTRPCRouter({
         },
       });
 
-      const nextResident = ctx.db.user.findFirst({
+      const nextResident = await ctx.db.user.findFirst({
         where: {
           occupies: null,
         },
@@ -42,7 +42,9 @@ export const bidRouter = createTRPCRouter({
         },
       });
 
-      nextResident.phoneNumber ?? sendSMS(nextResident.phoneNumber);
+      if (nextResident?.phoneNumber) {
+        sendSMS(nextResident.phoneNumber);
+      }
     }),
 
   // hello: publicProcedure
