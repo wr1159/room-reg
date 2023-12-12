@@ -30,7 +30,6 @@ const BidModal: React.FC<BidModalProps> = ({
   isDialogOpen,
   setIsDialogOpen,
 }) => {
-  type User = RouterOutputs["user"]["createUser"];
   const [matricNumber, setMatricNumber] = useState("");
   const roomMutation = api.bid.bidRoom.useMutation();
   const { data: user, refetch: refetchUser } = api.user.getUser.useQuery(
@@ -64,6 +63,7 @@ const BidModal: React.FC<BidModalProps> = ({
           refetchedUser.gender.description
         } user cannot choose a ${room?.gender.description.toLowerCase()} room`,
       );
+      return;
     }
 
     if (refetchedHighestUnoccupiedPoints === undefined) {

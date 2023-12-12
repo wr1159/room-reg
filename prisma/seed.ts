@@ -26,19 +26,33 @@ async function seedUsers() {
       matricNumber: "A0123456A",
       points: 121,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Alice",
+      matricNumber: "A0123456A",
+      points: 121,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const bob = await prisma.user.upsert({
     where: { id: 2 },
     create: {
       name: "Bob",
-      matricNumber: "nitrpd",
+      matricNumber: "A1234567B",
       points: 89,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Bob",
+      matricNumber: "A1234567B",
+      points: 89,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const charlie = await prisma.user.upsert({
@@ -48,8 +62,15 @@ async function seedUsers() {
       matricNumber: "A1234567C",
       points: 97,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Charlie",
+      matricNumber: "A1234567C",
+      points: 97,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const dave = await prisma.user.upsert({
@@ -59,8 +80,15 @@ async function seedUsers() {
       matricNumber: "A7654321D",
       points: 100,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Dave",
+      matricNumber: "A7654321D",
+      points: 100,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const eve = await prisma.user.upsert({
@@ -70,8 +98,15 @@ async function seedUsers() {
       matricNumber: "A2345678E",
       points: 113,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Eve",
+      matricNumber: "A2345678E",
+      points: 113,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const francesca = await prisma.user.upsert({
@@ -81,8 +116,15 @@ async function seedUsers() {
       matricNumber: "A3456789F",
       points: 101,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Francesca",
+      matricNumber: "A3456789F",
+      points: 101,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const george = await prisma.user.upsert({
@@ -92,8 +134,15 @@ async function seedUsers() {
       matricNumber: "A4567890G",
       points: 99,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "George",
+      matricNumber: "A4567890G",
+      points: 99,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const harry = await prisma.user.upsert({
@@ -103,8 +152,15 @@ async function seedUsers() {
       matricNumber: "A5678901H",
       points: 120,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Harry",
+      matricNumber: "A5678901H",
+      points: 120,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const ian = await prisma.user.upsert({
@@ -114,8 +170,15 @@ async function seedUsers() {
       matricNumber: "A6789012I",
       points: 111,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Ian",
+      matricNumber: "A6789012I",
+      points: 111,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const joanne = await prisma.user.upsert({
@@ -125,8 +188,15 @@ async function seedUsers() {
       matricNumber: "A7890123J",
       points: 98,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Joanne",
+      matricNumber: "A7890123J",
+      points: 98,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const karen = await prisma.user.upsert({
@@ -136,8 +206,15 @@ async function seedUsers() {
       matricNumber: "A8901234K",
       points: 102,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Karen",
+      matricNumber: "A8901234K",
+      points: 102,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const larry = await prisma.user.upsert({
@@ -147,19 +224,33 @@ async function seedUsers() {
       matricNumber: "A9012345L",
       points: 110,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Larry",
+      matricNumber: "A9012345L",
+      points: 110,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
-  const mary = await prisma.user.upsert({
+  const mohammad = await prisma.user.upsert({
     where: { id: 13 },
     create: {
-      name: "Mary",
+      name: "Mohammad",
       matricNumber: "A0123456M",
       points: 114,
-      genderId: 2,
+      genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Mohammad",
+      matricNumber: "A0123456M",
+      points: 114,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const nancy = await prisma.user.upsert({
@@ -169,8 +260,15 @@ async function seedUsers() {
       matricNumber: "A1234567N",
       points: 115,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Nancy",
+      matricNumber: "A1234567N",
+      points: 115,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const oscar = await prisma.user.upsert({
@@ -180,8 +278,15 @@ async function seedUsers() {
       matricNumber: "A2345678O",
       points: 116,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Oscar",
+      matricNumber: "A2345678O",
+      points: 116,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const peter = await prisma.user.upsert({
@@ -191,8 +296,15 @@ async function seedUsers() {
       matricNumber: "A3456789P",
       points: 117,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Peter",
+      matricNumber: "A3456789P",
+      points: 117,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const quentin = await prisma.user.upsert({
@@ -202,8 +314,15 @@ async function seedUsers() {
       matricNumber: "A4567890Q",
       points: 118,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Quentin",
+      matricNumber: "A4567890Q",
+      points: 118,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const robert = await prisma.user.upsert({
@@ -213,8 +332,15 @@ async function seedUsers() {
       matricNumber: "A5678901R",
       points: 119,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Robert",
+      matricNumber: "A5678901R",
+      points: 119,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const sarah = await prisma.user.upsert({
@@ -222,10 +348,17 @@ async function seedUsers() {
     create: {
       name: "Sarah",
       matricNumber: "A6789012S",
-      points: 103,
+      points: 69,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Sarah",
+      matricNumber: "A6789012S",
+      points: 69,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const tom = await prisma.user.upsert({
@@ -233,10 +366,17 @@ async function seedUsers() {
     create: {
       name: "Tom",
       matricNumber: "A7890123T",
-      points: 104,
+      points: 75,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Tom",
+      matricNumber: "A7890123T",
+      points: 75,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const ursula = await prisma.user.upsert({
@@ -244,10 +384,17 @@ async function seedUsers() {
     create: {
       name: "Ursula",
       matricNumber: "A8901234U",
-      points: 105,
+      points: 120,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Ursula",
+      matricNumber: "A8901234U",
+      points: 120,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const victor = await prisma.user.upsert({
@@ -257,8 +404,15 @@ async function seedUsers() {
       matricNumber: "A9012345V",
       points: 106,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Victor",
+      matricNumber: "A9012345V",
+      points: 106,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const wendy = await prisma.user.upsert({
@@ -268,8 +422,15 @@ async function seedUsers() {
       matricNumber: "A0123456W",
       points: 107,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Wendy",
+      matricNumber: "A0123456W",
+      points: 107,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const xavier = await prisma.user.upsert({
@@ -279,8 +440,15 @@ async function seedUsers() {
       matricNumber: "A1234567X",
       points: 108,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Xavier",
+      matricNumber: "A1234567X",
+      points: 108,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const yvonne = await prisma.user.upsert({
@@ -290,8 +458,15 @@ async function seedUsers() {
       matricNumber: "A2345678Y",
       points: 109,
       genderId: 2,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Yvonne",
+      matricNumber: "A2345678Y",
+      points: 109,
+      genderId: 2,
+      phoneNumber: "+6581366963",
+    },
   });
 
   const zack = await prisma.user.upsert({
@@ -299,10 +474,17 @@ async function seedUsers() {
     create: {
       name: "Zack",
       matricNumber: "A3456789Z",
-      points: 112,
+      points: 56,
       genderId: 1,
+      phoneNumber: "+6581366963",
     },
-    update: {},
+    update: {
+      name: "Zack",
+      matricNumber: "A3456789Z",
+      points: 56,
+      genderId: 1,
+      phoneNumber: "+6581366963",
+    },
   });
 }
 
@@ -874,8 +1056,8 @@ async function seedRooms() {
 
 async function main() {
   // await seedGenders();
-  // await seedUsers();
   await seedRooms();
+  // await seedUsers();
 }
 main()
   .then(async () => {

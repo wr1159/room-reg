@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
+import { sendSMS } from "~/server/twilio";
 
 export const bidRouter = createTRPCRouter({
   bidRoom: publicProcedure
@@ -31,6 +32,17 @@ export const bidRouter = createTRPCRouter({
           },
         },
       });
+
+      const nextResident = ctx.db.user.findFirst({
+        where: {
+          occupies: null,
+        },
+        orderBy: {
+          points: "desc",
+        },
+      });
+
+      nextResident.phoneNumber ?? sendSMS(nextResident.phoneNumber);
     }),
 
   // hello: publicProcedure
