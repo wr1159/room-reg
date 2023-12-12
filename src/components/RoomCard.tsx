@@ -5,18 +5,23 @@ import { useState } from "react";
 type Room = RouterOutputs["room"]["getRoom"];
 
 type RoomCardProps = {
-  room: Room;
+  roomNumber: string;
+  rooms: Room[] | undefined;
 };
 
 const getRoomType = (room: Room) => {
+  if (room == null) {
+    return "Unknown";
+  }
   let result = "";
   result += room?.genderId == 1 ? "M" : "F";
   result += room?.isDouble ? "D" : "S";
   return result;
 };
 
-export default function RoomCard({ room }: RoomCardProps) {
+export default function RoomCard({ roomNumber, rooms }: RoomCardProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const room = rooms?.find((room) => room?.name === roomNumber) || null;
   return (
     <BidModal
       room={room}
@@ -28,7 +33,7 @@ export default function RoomCard({ room }: RoomCardProps) {
         disabled={room?.occupant ? true : false}
         onClick={() => setIsDialogOpen(true)}
       >
-        <span className="text-sm">{room?.name}</span>
+        <span className="text-sm">{roomNumber}</span>
         <span>{getRoomType(room)}</span>
         <span className="font-bold">{room?.occupant?.name}</span>
       </Button>

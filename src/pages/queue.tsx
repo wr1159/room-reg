@@ -5,8 +5,6 @@ const QueuePage: React.FC = () => {
   const { data: highestUnoccupiedPoints } =
     api.user.getHighestUnoccupiedPoints.useQuery();
 
-  // use getUserByPoint with the highestUnoccupiedPoints
-
   const { data: namesInBid } = api.user.getUsersByPoints.useQuery({
     points: highestUnoccupiedPoints || 0,
   });
