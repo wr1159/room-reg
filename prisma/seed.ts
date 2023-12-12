@@ -493,7 +493,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-309",
+        name: "2-309",
         genderId: 1,
         isDouble: false,
       },
@@ -503,7 +503,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-308",
+        name: "2-308",
         genderId: 1,
         isDouble: false,
       },
@@ -513,7 +513,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-307",
+        name: "2-307",
         genderId: 1,
         isDouble: false,
       },
@@ -522,17 +522,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-306",
-        genderId: 1,
-        isDouble: false,
-      },
-      update: {},
-    });
-    id++;
-  await prisma.room.upsert({
-      where: {id: id},
-      create: {
-        name: "4-305",
+        name: "2-306",
         genderId: 1,
         isDouble: false,
       },
@@ -542,9 +532,9 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-304",
+        name: "2-305",
         genderId: 1,
-        isDouble: true,
+        isDouble: false,
       },
       update: {},
     });
@@ -552,7 +542,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-303",
+        name: "2-304",
         genderId: 1,
         isDouble: true,
       },
@@ -562,7 +552,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-302",
+        name: "2-303",
         genderId: 1,
         isDouble: true,
       },
@@ -572,7 +562,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-301",
+        name: "2-302",
         genderId: 1,
         isDouble: true,
       },
@@ -582,7 +572,17 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-209",
+        name: "2-301",
+        genderId: 1,
+        isDouble: true,
+      },
+      update: {},
+    });
+    id++;
+  await prisma.room.upsert({
+      where: {id: id},
+      create: {
+        name: "2-209",
         genderId: 2,
         isDouble: false,
       },
@@ -591,7 +591,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-208",
+        name: "2-208",
         genderId: 2,
         isDouble: false,
       },
@@ -601,7 +601,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-207",
+        name: "2-207",
         genderId: 2,
         isDouble: false,
       },
@@ -611,7 +611,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-206",
+        name: "2-206",
         genderId: 2,
         isDouble: false,
       },
@@ -621,7 +621,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-203",
+        name: "2-203",
         genderId: 2,
         isDouble: true,
       },
@@ -632,7 +632,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-202",
+        name: "2-202",
         genderId: 2,
         isDouble: true,
       },
@@ -642,7 +642,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-201",
+        name: "2-201",
         genderId: 2,
         isDouble: true,
       },
@@ -652,7 +652,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-109",
+        name: "2-109",
         genderId: 1,
         isDouble: false,
       },
@@ -662,7 +662,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-108",
+        name: "2-108",
         genderId: 1,
         isDouble: false,
       },
@@ -672,7 +672,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-107",
+        name: "2-107",
         genderId: 1,
         isDouble: false,
       },
@@ -682,7 +682,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-106",
+        name: "2-106",
         genderId: 1,
         isDouble: false,
       },
@@ -693,7 +693,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-105",
+        name: "2-105",
         genderId: 1,
         isDouble: false,
       },
@@ -703,7 +703,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-104",
+        name: "2-104",
         genderId: 1,
         isDouble: true,
       },
@@ -713,7 +713,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-103",
+        name: "2-103",
         genderId: 1,
         isDouble: true,
       },
@@ -723,7 +723,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-102",
+        name: "2-102",
         genderId: 1,
         isDouble: true,
       },
@@ -733,7 +733,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-311",
+        name: "2-311",
         genderId: 2,
         isDouble: false,
       },
@@ -743,7 +743,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-312",
+        name: "2-312",
         genderId: 2,
         isDouble: true,
       },
@@ -753,7 +753,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-313",
+        name: "2-313",
         genderId: 2,
         isDouble: true,
       },
@@ -763,7 +763,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-314",
+        name: "2-314",
         genderId: 2,
         isDouble: true,
       },
@@ -773,7 +773,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-315",
+        name: "2-315",
         genderId: 2,
         isDouble: true,
       },
@@ -783,7 +783,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-316",
+        name: "2-316",
         genderId: 2,
         isDouble: true,
       },
@@ -793,7 +793,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-317",
+        name: "2-317",
         genderId: 2,
         isDouble: false,
       },
@@ -803,7 +803,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-318",
+        name: "2-318",
         genderId: 2,
         isDouble: false,
       },
@@ -814,7 +814,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-319",
+        name: "2-319",
         genderId: 2,
         isDouble: false,
       },
@@ -824,7 +824,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-320",
+        name: "2-320",
         genderId: 2,
         isDouble: false,
       },
@@ -833,7 +833,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-211",
+        name: "2-211",
         genderId: 2,
         isDouble: false,
       },
@@ -843,7 +843,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-212",
+        name: "2-212",
         genderId: 2,
         isDouble: true,
       },
@@ -853,7 +853,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-213",
+        name: "2-213",
         genderId: 2,
         isDouble: true,
       },
@@ -863,7 +863,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-214",
+        name: "2-214",
         genderId: 2,
         isDouble: true,
       },
@@ -873,7 +873,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-215",
+        name: "2-215",
         genderId: 2,
         isDouble: true,
       },
@@ -883,7 +883,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-216",
+        name: "2-216",
         genderId: 2,
         isDouble: true,
       },
@@ -893,7 +893,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-217",
+        name: "2-217",
         genderId: 1,
         isDouble: false,
       },
@@ -903,7 +903,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-218",
+        name: "2-218",
         genderId: 1,
         isDouble: false,
       },
@@ -913,7 +913,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-219",
+        name: "2-219",
         genderId: 1,
         isDouble: false,
       },
@@ -923,7 +923,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-220",
+        name: "2-220",
         genderId: 1,
         isDouble: false,
       },
@@ -932,7 +932,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-111",
+        name: "2-111",
         genderId: 1,
         isDouble: false,
       },
@@ -942,7 +942,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-112",
+        name: "2-112",
         genderId: 1,
         isDouble: true,
       },
@@ -952,7 +952,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-113",
+        name: "2-113",
         genderId: 1,
         isDouble: true,
       },
@@ -962,7 +962,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-114",
+        name: "2-114",
         genderId: 1,
         isDouble: true,
       },
@@ -972,7 +972,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-115",
+        name: "2-115",
         genderId: 1,
         isDouble: true,
       },
@@ -982,7 +982,7 @@ async function seedRooms() {
   await prisma.room.upsert({
       where: {id: id},
       create: {
-        name: "4-116",
+        name: "2-116",
         genderId: 1,
         isDouble: true,
       },
@@ -1002,7 +1002,7 @@ async function seedRooms() {
   // const room2 = await prisma.room.upsert({
   //   where: { id: 2 },
   //   create: {
-  //     name: "4-210",
+  //     name: "2-210",
   //     genderId: 1,
   //   },
   //   update: {},
@@ -1047,7 +1047,7 @@ async function seedRooms() {
   // const room7 = await prisma.room.upsert({
   //   where: { id: 7 },
   //   create: {
-  //     name: "4-210",
+  //     name: "2-210",
   //     genderId: 1,
   //   },
   //   update: {},
@@ -1057,7 +1057,7 @@ async function seedRooms() {
 async function main() {
   // await seedGenders();
   await seedRooms();
-  // await seedUsers();
+  await seedUsers();
 }
 main()
   .then(async () => {

@@ -1,4 +1,5 @@
 import { RouterOutputs } from "~/utils/api";
+import { api } from "~/utils/api";
 import RoomCard from "~/components/RoomCard";
 import React from "react";
 import Toilet from "./Toilet";
@@ -26,6 +27,7 @@ const femaleSingle = {
 };
 const BlockEight: React.FC = () => {
   // display columns of rooms
+  const { data: rooms } = api.room.listRooms.useQuery();
   return (
     <div className="flex gap-x-10 gap-y-10 rounded-md p-4">
       {/* Level 5
@@ -41,13 +43,13 @@ const BlockEight: React.FC = () => {
             <div className="h-16" />
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Pantry className="h-16 w-20" />
               <div className="w-20" />
               <Toilet gender="Female" />
@@ -59,7 +61,7 @@ const BlockEight: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 1"
@@ -68,15 +70,15 @@ const BlockEight: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
           {/* Middle  Half */}
@@ -85,36 +87,36 @@ const BlockEight: React.FC = () => {
             <div className="h-[68px]" />
             <BBQPit />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Lift className="h-16" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
           {/* Right column */}
           <div className="flex-col space-y-1">
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 2"
@@ -127,22 +129,22 @@ const BlockEight: React.FC = () => {
               <Stairs className="h-16" />
             </div>
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Toilet gender="Female" className="h-16" />
               <div className="w-20" />
               <Pantry className="h-16 w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
         </div>
@@ -155,13 +157,13 @@ const BlockEight: React.FC = () => {
             <div className="h-16" />
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Pantry className="h-16 w-20" />
               <div className="w-20" />
               <Toilet gender="Female" />
@@ -173,7 +175,7 @@ const BlockEight: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 1"
@@ -182,15 +184,15 @@ const BlockEight: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
           {/* Middle  Half */}
@@ -199,36 +201,36 @@ const BlockEight: React.FC = () => {
             <div className="h-[68px]" />
             <BBQPit />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Lift className="h-16" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
           {/* Right column */}
           <div className="flex-col space-y-1">
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 2"
@@ -241,22 +243,22 @@ const BlockEight: React.FC = () => {
               <Stairs className="h-16" />
             </div>
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Toilet gender="Female" className="h-16" />
               <div className="w-20" />
               <Pantry className="h-16 w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
         </div>
@@ -275,13 +277,13 @@ const BlockEight: React.FC = () => {
             <div className="h-16" />
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Pantry className="h-16 w-20" />
               <div className="w-20" />
               <Toilet gender="Female" />
@@ -293,7 +295,7 @@ const BlockEight: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 1"
@@ -302,15 +304,15 @@ const BlockEight: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
           {/* Middle  Half */}
@@ -319,36 +321,36 @@ const BlockEight: React.FC = () => {
             <div className="h-[68px]" />
             <BBQPit />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Lift className="h-16" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
           {/* Right column */}
           <div className="flex-col space-y-1">
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 2"
@@ -361,22 +363,22 @@ const BlockEight: React.FC = () => {
               <Stairs className="h-16" />
             </div>
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Toilet gender="Female" className="h-16" />
               <div className="w-20" />
               <Pantry className="h-16 w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
         </div>
@@ -389,13 +391,13 @@ const BlockEight: React.FC = () => {
             <div className="h-16" />
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Pantry className="h-16 w-20" />
               <div className="w-20" />
               <Toilet gender="Female" />
@@ -407,7 +409,7 @@ const BlockEight: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 1"
@@ -416,15 +418,15 @@ const BlockEight: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
           {/* Middle  Half */}
@@ -433,36 +435,36 @@ const BlockEight: React.FC = () => {
             <div className="h-[68px]" />
             <BBQPit />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Lift className="h-16" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
           {/* Right column */}
           <div className="flex-col space-y-1">
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 2"
@@ -475,22 +477,22 @@ const BlockEight: React.FC = () => {
               <Stairs className="h-16" />
             </div>
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <Toilet gender="Female" className="h-16" />
               <div className="w-20" />
               <Pantry className="h-16 w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="8-XYZ" />
             </div>
           </div>
         </div>

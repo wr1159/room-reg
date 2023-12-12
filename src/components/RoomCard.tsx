@@ -27,6 +27,7 @@ export default function RoomCard({ roomNumber, rooms }: RoomCardProps) {
       room={room}
       isDialogOpen={isDialogOpen}
       setIsDialogOpen={setIsDialogOpen}
+      key={roomNumber}
     >
       <Button
         className="flex h-16 min-h-[64px] w-20 min-w-[80px] flex-col px-2 py-1 text-xs"

@@ -1,4 +1,5 @@
 import { RouterOutputs } from "~/utils/api";
+import { api } from "~/utils/api";
 import RoomCard from "~/components/RoomCard";
 import React from "react";
 import Toilet from "./Toilet";
@@ -25,6 +26,7 @@ const femaleSingle = {
   occupant: null,
 };
 const BlockSeven: React.FC = () => {
+  const { data: rooms } = api.room.listRooms.useQuery();
   // display columns of rooms
   return (
     <div className="flex gap-x-10 gap-y-10 rounded-md p-4">
@@ -41,9 +43,9 @@ const BlockSeven: React.FC = () => {
             <div className="h-16" />
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
@@ -91,19 +93,19 @@ const BlockSeven: React.FC = () => {
             <div className="h-16" />
             <BBQPit />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Lift className="h-16" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
           </div>
           {/* Right column */}
@@ -133,13 +135,13 @@ const BlockSeven: React.FC = () => {
             <div className="h-16" />
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Pantry className="h-16 w-20" />
               <div className="w-20" />
               <Toilet gender="Female" />
@@ -151,7 +153,7 @@ const BlockSeven: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 1"
@@ -160,15 +162,15 @@ const BlockSeven: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
           </div>
           {/* Middle  Half */}
@@ -177,36 +179,36 @@ const BlockSeven: React.FC = () => {
             <div className="h-[68px]" />
             <BBQPit />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Lift className="h-16" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
           </div>
           {/* Right column */}
           <div className="flex-col space-y-1">
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 2"
@@ -219,7 +221,7 @@ const BlockSeven: React.FC = () => {
               <Stairs className="h-16" />
             </div>
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Toilet gender="Female" className="h-16" />
               <div className="w-20" />
               <GenericRoom
@@ -244,13 +246,13 @@ const BlockSeven: React.FC = () => {
             <div className="h-16" />
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Pantry className="h-16 w-20" />
               <div className="w-20" />
               <Toilet gender="Female" />
@@ -262,7 +264,7 @@ const BlockSeven: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 1"
@@ -271,15 +273,15 @@ const BlockSeven: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
           </div>
           {/* Middle  Half */}
@@ -288,36 +290,36 @@ const BlockSeven: React.FC = () => {
             <div className="h-[68px]" />
             <BBQPit />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Lift className="h-16" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
           </div>
           {/* Right column */}
           <div className="flex-col space-y-1">
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 2"
@@ -330,7 +332,7 @@ const BlockSeven: React.FC = () => {
               <Stairs className="h-16" />
             </div>
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Toilet gender="Female" className="h-16" />
               <div className="w-20" />
               <GenericRoom
@@ -349,13 +351,13 @@ const BlockSeven: React.FC = () => {
             <div className="h-16" />
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Pantry className="h-16 w-20" />
               <div className="w-20" />
               <Toilet gender="Female" />
@@ -367,7 +369,7 @@ const BlockSeven: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 1"
@@ -376,15 +378,15 @@ const BlockSeven: React.FC = () => {
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
           </div>
           {/* Middle  Half */}
@@ -393,36 +395,36 @@ const BlockSeven: React.FC = () => {
             <div className="h-[68px]" />
             <BBQPit />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Lift className="h-16" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
           </div>
           {/* Right column */}
           <div className="flex-col space-y-1">
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <Toilet gender="Female" />
             </div>
             <div className="flex gap-x-1">
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
               <GenericRoom
                 roomName="Staircase 2"
@@ -435,22 +437,22 @@ const BlockSeven: React.FC = () => {
               <Stairs className="h-16" />
             </div>
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <Toilet gender="Female" className="h-16" />
               <div className="w-20" />
               <Pantry className="h-16 w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
             <div className="h-16" />
             <div className="flex gap-x-1">
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
               <div className="w-20" />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
-              <RoomCard room={femaleSingle} />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
+              <RoomCard rooms={rooms} roomNumber="7-XYZ" />
             </div>
           </div>
         </div>
