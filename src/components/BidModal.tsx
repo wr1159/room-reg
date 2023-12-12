@@ -123,7 +123,7 @@ const BidModal: React.FC<BidModalProps> = ({
               onClick={() => setIsDialogOpen(false)}
               variant="secondary"
             >
-              Close
+              Cancel
             </Button>
           </DialogClose>
           <Button onClick={handleSubmitBid} type="submit">

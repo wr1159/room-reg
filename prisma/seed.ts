@@ -34,7 +34,7 @@ async function seedUsers() {
     where: { id: 2 },
     create: {
       name: "Bob",
-      matricNumber: "A98765432B",
+      matricNumber: "nitrpd",
       points: 89,
       genderId: 1,
     },
@@ -70,6 +70,237 @@ async function seedUsers() {
       matricNumber: "A2345678E",
       points: 113,
       genderId: 2,
+    },
+    update: {},
+  });
+
+  const francesca = await prisma.user.upsert({
+    where: { id: 6 },
+    create: {
+      name: "Francesca",
+      matricNumber: "A3456789F",
+      points: 101,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const george = await prisma.user.upsert({
+    where: { id: 7 },
+    create: {
+      name: "George",
+      matricNumber: "A4567890G",
+      points: 99,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const harry = await prisma.user.upsert({
+    where: { id: 8 },
+    create: {
+      name: "Harry",
+      matricNumber: "A5678901H",
+      points: 120,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const ian = await prisma.user.upsert({
+    where: { id: 9 },
+    create: {
+      name: "Ian",
+      matricNumber: "A6789012I",
+      points: 111,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const joanne = await prisma.user.upsert({
+    where: { id: 10 },
+    create: {
+      name: "Joanne",
+      matricNumber: "A7890123J",
+      points: 98,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const karen = await prisma.user.upsert({
+    where: { id: 11 },
+    create: {
+      name: "Karen",
+      matricNumber: "A8901234K",
+      points: 102,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const larry = await prisma.user.upsert({
+    where: { id: 12 },
+    create: {
+      name: "Larry",
+      matricNumber: "A9012345L",
+      points: 110,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const mary = await prisma.user.upsert({
+    where: { id: 13 },
+    create: {
+      name: "Mary",
+      matricNumber: "A0123456M",
+      points: 114,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const nancy = await prisma.user.upsert({
+    where: { id: 14 },
+    create: {
+      name: "Nancy",
+      matricNumber: "A1234567N",
+      points: 115,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const oscar = await prisma.user.upsert({
+    where: { id: 15 },
+    create: {
+      name: "Oscar",
+      matricNumber: "A2345678O",
+      points: 116,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const peter = await prisma.user.upsert({
+    where: { id: 16 },
+    create: {
+      name: "Peter",
+      matricNumber: "A3456789P",
+      points: 117,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const quentin = await prisma.user.upsert({
+    where: { id: 17 },
+    create: {
+      name: "Quentin",
+      matricNumber: "A4567890Q",
+      points: 118,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const robert = await prisma.user.upsert({
+    where: { id: 18 },
+    create: {
+      name: "Robert",
+      matricNumber: "A5678901R",
+      points: 119,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const sarah = await prisma.user.upsert({
+    where: { id: 19 },
+    create: {
+      name: "Sarah",
+      matricNumber: "A6789012S",
+      points: 103,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const tom = await prisma.user.upsert({
+    where: { id: 20 },
+    create: {
+      name: "Tom",
+      matricNumber: "A7890123T",
+      points: 104,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const ursula = await prisma.user.upsert({
+    where: { id: 21 },
+    create: {
+      name: "Ursula",
+      matricNumber: "A8901234U",
+      points: 105,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const victor = await prisma.user.upsert({
+    where: { id: 22 },
+    create: {
+      name: "Victor",
+      matricNumber: "A9012345V",
+      points: 106,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const wendy = await prisma.user.upsert({
+    where: { id: 23 },
+    create: {
+      name: "Wendy",
+      matricNumber: "A0123456W",
+      points: 107,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const xavier = await prisma.user.upsert({
+    where: { id: 24 },
+    create: {
+      name: "Xavier",
+      matricNumber: "A1234567X",
+      points: 108,
+      genderId: 1,
+    },
+    update: {},
+  });
+
+  const yvonne = await prisma.user.upsert({
+    where: { id: 25 },
+    create: {
+      name: "Yvonne",
+      matricNumber: "A2345678Y",
+      points: 109,
+      genderId: 2,
+    },
+    update: {},
+  });
+
+  const zack = await prisma.user.upsert({
+    where: { id: 26 },
+    create: {
+      name: "Zack",
+      matricNumber: "A3456789Z",
+      points: 112,
+      genderId: 1,
     },
     update: {},
   });
