@@ -92,7 +92,11 @@ const BidModal: React.FC<BidModalProps> = ({
   };
 
   return (
-    <Dialog open={isDialogOpen} defaultOpen={false}>
+    <Dialog
+      open={isDialogOpen}
+      onOpenChange={setIsDialogOpen}
+      defaultOpen={false}
+    >
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent
         className="sm:max-w-[425px]"
